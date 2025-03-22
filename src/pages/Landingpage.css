@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}html,
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+.main{
+    height: 45vw;
+    width: 100%;
+    color: white;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+   height: 45vw;
+    object-fit: cover;
+    z-index: -10;
+  }
+
+  #nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    
+  }
+  #nav h2{
+    position: fixed;
+    z-index: 5;
+  }
+
+  #nav i{
+    font-size: 50px;
+    font-weight: 200;
+    color: white;
+    right: 40px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 5;
+  }
+
+  #full{
+    height: 100%;
+    width: 25%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.623);
+    top: 0;
+    right: -25%;
+    backdrop-filter: blur(10px);
+    padding: 90px 50px;
+    z-index: 10;
+   
+  }
+  #full h4{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+   
+  }
+
+  #full i{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-weight: 200;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 20;
+}
+#page2{
+    height:50vw;
+    width: 100vw;
+    background-color: rgb(103, 245, 37);
+    z-index: -3;
+    padding: auto;
+    
+    
+}
+#page2 h1{
+  font-size: 500px;
+  font-weight: bolder;
+  color: rgb(2, 0, 0);
+
+  
+}
+#page3{
+  height:50vw;
+  width: 33.3%;
+  background-color: rgb(169, 136, 201);
+}
+#page4{
+  height:50vw;
+  width: 33.3%;
+  background-color: rgb(47, 29, 63);
+}   
+#page{
+  height:50vw;
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 0%;
+ 
+} 
+#contentpage{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.788);
+  
+ 
+}
+
+#name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vw;
+    color: rgb(255, 255, 255);
+    font-size: 120px;
+}
+#name h1 span{
+    display: inline-block;
+}
+#slogan{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.466);
+  backdrop-filter: blur(10px);
+  padding: 20px 200px;
+}
+#slogan h2{
+  font-style: italic;
+  font-size: 35px;
+  font-weight: lighter;
+}
+.mind{
+  background-image: url("mind-1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%); 
+  transition: filter 0.5s ease;
+}
+.fit{
+  background-image: url("FIT-1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%); 
+  transition: filter 0.5s ease;
+}
+.care{
+  background-image: url("care.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%); 
+  transition: filter 0.5s ease;
+}
+#page:hover {
+  filter: brightness(100%);
+
+}
+#page:hover h1 {
+  color: #ffffff; /* change text color on hover */
+  text-shadow:  0 0 30px #000000;
+}
+#page:hover h2 {
+  text-shadow: 0 0 30px #ffffff;
+}
+.fit{
+  background-color: rgb(95, 124, 124);
+}
+.care{
+  background-color: rgb(7, 37, 37);
+}
+
+#cursor1{
+  height: 10px;
+  width: 10px;
+  z-index: 200;
+}
+#cursor1 img{
+  height: auto;
+  width: 40px;
+}
+
+#heading{
+  font-size: 70px;
+  top: 30%;
+}
+#subheading{
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+.btn {
+  margin: 100px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #7c30f5, #188801, #FFFB00, #66f82c,
+    #01ffd5, #274bff, #34fd02, #5eff00
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}
+
+
+@media (max-width: 1024px) {
+  #name {
+    font-size: 15vw;
+    height: 20vh;
+  }
+
+  #slogan {
+    padding: 10px 50px;
+  }
+
+  #slogan h2 {
+    font-size: 24px;
+  }
+
+  #page2 h1 {
+    font-size: 200px;
+  }
+
+  #page {
+    width: 100%;
+    height: 80vh;
+    padding: 40px 20px;
+  }
+
+  #heading {
+    font-size: 50px;
+  }
+
+  #subheading {
+    font-size: 20px;
+  }
+
+  .btn {
+    margin: 50px;
+    padding: 12px 30px;
+  }
+
+  #nav i {
+    font-size: 40px;
+    right: 20px;
+  }
+
+  #full {
+    width: 60%;
+    right: -60%;
+  }
+
+  #full h4 {
+    font-size: 30px;
+  }
+
+  #full i {
+    font-size: 30px;
+  }
+
+  #myVideo {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 600px) {
+  #name {
+    font-size: 12vw;
+  }
+
+  #slogan h2 {
+    font-size: 18px;
+  }
+
+  #page2 h1 {
+    font-size: 100px;
+  }
+
+  #heading {
+    font-size: 36px;
+  }
+
+  #subheading {
+    font-size: 16px;
+  }
+
+  .btn {
+    margin: 30px;
+    padding: 10px 20px;
+  }
+
+  #nav {
+    padding: 20px 30px;
+  }
+
+  #nav h2 {
+    font-size: 24px;
+  }
+
+  #nav i {
+    font-size: 32px;
+  }
+
+  #full {
+    width: 80%;
+    right: -80%;
+  }
+
+  #cursor1 img {
+    width: 25px;
+  }
+
+  #myVideo {
+    height: 100vh;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .main {
+    display: none;
+  }
+  #page2{
+    display: none;
+  }
+ 
+ 
+}
+
+@media (max-width: 800px) {
+  #contentpage {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+} 
+
+  #page {
+    width: 100%;     /* Full width */
+    height: auto;    /* Let height adjust naturally */
+    padding: 50px 20px; /* Give some padding */
+  }
+
+  #heading {
+    font-size: 40px; /* Smaller heading */
+  }
+
+  #subheading {
+    font-size: 20px;
+  }
+
+  .btn {
+    margin: 30px; /* Reduce margin */
+    padding: 12px 30px; /* Slightly smaller button */
+  }
+}
