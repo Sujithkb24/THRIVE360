@@ -148,22 +148,19 @@ body{
   background-image: url("mind-1.jpg");
   background-size: cover;
   background-position: center;
-  filter: brightness(50%); 
-  transition: filter 0.5s ease;
+  
 }
 .fit{
   background-image: url("FIT-1.jpg");
   background-size: cover;
   background-position: center;
-  filter: brightness(50%); 
-  transition: filter 0.5s ease;
+  
 }
 .care{
   background-image: url("care.jpg");
   background-size: cover;
   background-position: center;
-  filter: brightness(50%); 
-  transition: filter 0.5s ease;
+  
 }
 #page:hover {
   filter: brightness(100%);
@@ -345,10 +342,12 @@ body{
 
   #heading {
     font-size: 36px;
+   
   }
 
   #subheading {
     font-size: 16px;
+   
   }
 
   .btn {
@@ -393,21 +392,35 @@ body{
  
  
 }
+@media (min-width: 800px) {
+  .mind{
+    filter: brightness(50%); 
+  transition: filter 0.5s ease;
+  }
+  .fit{
+    filter: brightness(50%); 
+  transition: filter 0.5s ease;
+  }
+  .care{
+    filter: brightness(50%); 
+  transition: filter 0.5s ease;
+  }
+}
 
 @media (max-width: 800px) {
   #contentpage {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column; 
     align-items: center;
 } 
 
   #page {
-    width: 100%;     /* Full width */
-    height: auto;    /* Let height adjust naturally */
-    padding: 50px 20px; /* Give some padding */
+    width: 100%;    
+    height: auto;    
+    padding: 50px 20px; 
   }
 
   #heading {
-    font-size: 40px; /* Smaller heading */
+    font-size: 40px; 
   }
 
   #subheading {
@@ -415,7 +428,53 @@ body{
   }
 
   .btn {
-    margin: 30px; /* Reduce margin */
-    padding: 12px 30px; /* Slightly smaller button */
+    margin: 30px; 
+    padding: 12px 30px; 
+  }
+}
+
+.hero-banner {
+  display: none; /* Hidden by default */
+}
+
+@media (max-width: 800px) {
+  .hero-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+ 
+
+ 
+
+}
+.logo img{
+  height: auto;
+  width: 20px;
+  object-fit: contain;
+ 
+}
+
+@media (max-width:800px){
+  .logo img{
+    width: 200px;
   }
 }

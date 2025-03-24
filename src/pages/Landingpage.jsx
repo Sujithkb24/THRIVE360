@@ -8,6 +8,8 @@ import gsap from "gsap";
 import { Navigate } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 gsap.registerPlugin(ScrollTrigger);
 function Landingpage(){
     const navigate = useNavigate(); 
@@ -104,18 +106,6 @@ gsap.from(spans,{
     
   })
  
-  useEffect(()=>{
-    var main=document.querySelector("#landing");
-    var cursor1=document.querySelector("#cursor1")
-    main.addEventListener("mousemove",function(ele){
-      gsap.to(cursor1,{
-        x:ele.x,
-        y:ele.y,
-        duration:1,
-        ease:"back.out"
-      })
-    }) 
-  })
   
     
   useGSAP(()=>{
@@ -142,17 +132,47 @@ const scrolltoSol = () => {
   solRef.current.scrollIntoView({ behavior: "smooth" });
 };
 
+const showDevelopmentPopup = () => {
+  toast.info('🚧 Platform is under development. Stay tuned! 🚀', {
+    position: "top-center",
+    autoClose: 5000,           // Auto close after 5 seconds
+    hideProgressBar: false,    // Show progress bar
+    closeOnClick: true,        // Close on click
+    pauseOnHover: true,        // Pause timer on hover
+    draggable: true,           // Draggable
+    progress: undefined,
+    theme: "colored",          // Makes it colorful
+  });
+};
+
   return (
     <>
+     <div className="hero-banner">
+      <div className="hero-content">
+      <a href="/" className="logo">
+              <img
+                src="thrive.png"
+                alt="Logo"
+        
+              /></a>
+        <h1>Welcome to THRIVE360</h1>
+        <p>Inclusive healthcare solutions for physical and mental well-being</p>
+      </div>
+    </div>
     <div id="landing">
-    <div  id="cursor1"><img src="plant.png"></img></div>
+    <ToastContainer />
       <div ref={container}  className="main">
         <video autoPlay muted loop id="myVideo">
           <source src="landscape.mp4" type="video/mp4" />
         </video>
 
         <div id="nav">
-          <h2>Thrive360</h2>
+          <h2> <a href="/" className="logo">
+              <img
+                src="thrive.png"
+                alt="Logo"
+        
+              /></a>Thrive360</h2>
           <i onClick={()=> tl.play()}   className="ri-menu-3-line"></i>
         </div>
 
@@ -182,18 +202,18 @@ const scrolltoSol = () => {
       <div id="page" className="mind">
       <h1 id="heading">Mindfull</h1>
       <h2 id="subheading">A student mental wellness platform</h2>
-      <button type="submit" onClick={()=>{navigate("/")}} id="button" className="btn">Mind me There <i class="ri-arrow-right-up-line"></i></button>
+      <button type="submit" onClick={()=>window.location.href='https://mindfullweb.netlify.app/'} id="button" className="btn">MindFull <i class="ri-arrow-right-up-line"></i></button>
       </div>
       <div id="page" className="fit">
       <h1 id="heading">FitFull</h1>
       <h2 id="subheading">A comprehensive wearable health monitoring platform</h2>
-      <button type="submit" onClick={()=>{navigate("/")}} id="button" className="btn">Fit me There <i class="ri-arrow-right-up-line"></i></button>
+      <button type="submit" onClick={()=>window.location.href='https://fitfull.netlify.app/'} id="button" className="btn">FitFull <i class="ri-arrow-right-up-line"></i></button>
       </div>
       <div id="page" className="care">
         <h1 id="heading">CareFull</h1>
         <h2 id="subheading">An Online Medicine ordering and inventory management platform</h2>
-        <button type="submit" onClick={()=>{navigate("/")}} id="button" className="btn">Care me There <i class="ri-arrow-right-up-line"></i></button>
-      
+        <button type="submit"  onClick={showDevelopmentPopup} id="button" className="btn">CareFull <i class="ri-arrow-right-up-line"></i></button>
+        
       </div>
       
       </div>
