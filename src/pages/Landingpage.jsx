@@ -86,25 +86,6 @@ gsap.from(spans,{
       }
     })
   })
-// content page
-  useGSAP(()=>{
-    
-    gsap.from("#contentpage #page ",{
-      opacity:0,
-      y:100,
-      stagger:0.5,
-      duration:0.9,
-      delay:0.8,
-      scrollTrigger:{
-        trigger:"#contentpage",
-        scroller:"body",
-        start:"top 30%",
-        end:"top 100%",
-        scrub:5
-      }
-    })
-    
-  })
  
   
     
