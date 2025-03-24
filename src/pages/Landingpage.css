@@ -145,23 +145,42 @@ body{
   font-weight: lighter;
 }
 .mind{
-  background-image: url("mind-1.jpg");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ADEDE, #C4FCEF);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   
 }
+
+
 .fit{
-  background-image: url("FIT-1.jpg");
+  background: linear-gradient(-45deg, #f7e81d, #91e06d, #96f030, #f7ad24);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   background-size: cover;
   background-position: center;
   
 }
 .care{
-  background-image: url("care.jpg");
+  background: linear-gradient(-45deg, #ee44aa, #7873f5, #e66262, #d6be6e);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   background-size: cover;
   background-position: center;
   
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 #page:hover {
   filter: brightness(100%);
 

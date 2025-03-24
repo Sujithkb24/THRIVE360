@@ -201,7 +201,7 @@ const showDevelopmentPopup = () => {
     
       <div id="page" className="mind">
       <h1 id="heading">Mindfull</h1>
-      <h2 id="subheading">A student mental wellness platform</h2>
+      <h2 id="subheading">Your companion for mental wellness, anytime, anywhere.</h2>
       <button type="submit" onClick={()=>window.location.href='https://mindfullweb.netlify.app/'} id="button" className="btn">MindFull <i class="ri-arrow-right-up-line"></i></button>
       </div>
       <div id="page" className="fit">
