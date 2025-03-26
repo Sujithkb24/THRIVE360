@@ -43,7 +43,7 @@ gsap.from(spans,{
       }, []);
     // for nav icons  
   useGSAP(()=>{
-    tl2.from("#nav h2",{
+    tl2.from("#nav .logoname",{
       opacity:0,
       duration:0.3,
       delay:2.2
@@ -147,7 +147,10 @@ const showDevelopmentPopup = () => {
         </video>
 
         <div id="nav">
+          <div className="logoname">
+          <img src="T.png" className="biglogo"></img>
           <h2>Thrive360</h2>
+          </div>
           <i onClick={()=> tl.play()}   className="ri-menu-3-line"></i>
         </div>
 

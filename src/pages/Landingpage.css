@@ -34,7 +34,6 @@ body{
     
   }
   #nav h2{
-    position: fixed;
     z-index: 5;
   }
 
@@ -498,6 +497,24 @@ body{
 
 @media (max-width:800px){
   .logo img{
-    width: 200px;
+    width: 100px;
   }
 }
+
+
+.logoname{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.biglogo {
+  width: 30px;
+  height: auto; 
+  max-width: 100%; 
+  display: inline-block; 
+  margin: 0 auto; 
+  
+}
+
