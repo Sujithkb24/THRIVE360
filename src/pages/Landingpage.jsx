@@ -132,9 +132,8 @@ const showDevelopmentPopup = () => {
       <div className="hero-content">
       <a href="/" className="logo">
               <img
-                src="thrive.png"
+                src="T.png"
                 alt="Logo"
-        
               /></a>
         <h1>Welcome to THRIVE360</h1>
         <p>Inclusive healthcare solutions for physical and mental well-being</p>
@@ -148,12 +147,7 @@ const showDevelopmentPopup = () => {
         </video>
 
         <div id="nav">
-          <h2> <a href="/" className="logo">
-              <img
-                src="thrive.png"
-                alt="Logo"
-        
-              /></a>Thrive360</h2>
+          <h2>Thrive360</h2>
           <i onClick={()=> tl.play()}   className="ri-menu-3-line"></i>
         </div>
 
